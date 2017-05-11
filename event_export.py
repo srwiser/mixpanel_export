@@ -52,7 +52,7 @@ class Mixpanel(object):
 
         headers = {'Authorization': 'Basic {encoded_secret}'.format(encoded_secret=base64.b64encode(self.api_secret))}
         request = urllib2.Request(request_url, data, headers)
-        response = urllib2.urlopen(request, timeout=120).read()
+        response = urllib2.urlopen(request, timeout=900).read()
         event_raw = response.split('\n')
         event_raw = [json.loads(x) for x in event_raw[:-1]]
         return event_raw

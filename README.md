@@ -13,3 +13,12 @@ Export Raw Events from Mixpanel
 - Enter from and to-date in YYYY-MM-DD format
 
 - It will start downloading monthwise json files in the current directory
+
+
+**
+
+Convert json files to csv
+
+**
+
+- Run `./batch-convert.sh`

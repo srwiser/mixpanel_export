@@ -1,3 +1,4 @@
 mixpanel = {
-    u"api_secret": u"xxxx"
+    u"api_secret": u"xxxx",
+    u"project": u"yyyyy"
 }

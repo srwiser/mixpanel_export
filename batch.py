@@ -17,8 +17,8 @@ if __name__ == '__main__':
     while True:
         end_date = add_months(from_date,1)
         if to_date < end_date : end_date = to_date
-	api_secret = settings_local.mixpanel['api_secret']
-	output_file = "mixpanel_{}_{}.json".format(from_date.strftime("%Y-%m-%d"), end_date.strftime("%Y-%m-%d"))
+	api_secret = settings.mixpanel['api_secret']
+	output_file = "mixpanel_{}_{}_{}.json".format(settings.mixpanel['project'], from_date.strftime("%Y-%m-%d"), end_date.strftime("%Y-%m-%d"))
         event_export.mixpanel(from_date.strftime("%Y-%m-%d"), end_date.strftime("%Y-%m-%d"), output_file, api_secret)
         if to_date == end_date:
             break
